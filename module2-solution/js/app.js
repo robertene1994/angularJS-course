@@ -50,6 +50,12 @@
         }, {
             name: "Cookies",
             quantity: 100
+        }, {
+            name: "Chocolate",
+            quantity: 33
+        }, {
+            name: "Cola",
+            quantity: 7
         }];
 
         var boughtItems = [];
