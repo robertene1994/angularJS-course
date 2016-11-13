@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<div class="container loader" ng-if="list.items && list.items.length!==0">
+    <ul>
+        <li ng-repeat="item in list.items">
+            {{ item.name }},
+            {{ item.short_name }},
+            {{ item.description }}
+            <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+        </li>
+    </ul>
+</div>
+<div class="container error" ng-if="list.nothingFound()">Nothing found!</div>
