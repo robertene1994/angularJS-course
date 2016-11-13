@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<div class="loader" ng-show="list.items.length===0"></div>
+<div class="loader" ng-show="list.items.length===0 && !list.nothingFound()"></div>
 <div class="container list" ng-show="list.items && list.items.length!==0">
     <ul>
         <li ng-repeat="item in list.items">
