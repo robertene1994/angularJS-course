@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<div class="container" ng-controller="MyInfoController as myinfo">
+
+    <div class="row" ng-if="!myinfo.registered">
+        First Name:
+        {{myinfo.user.firstName}}
+        <br>
+        Last Name:
+        {{myinfo.user.lastName}}
+        <br>
+        Email:
+        {{myinfo.user.email}}
+        <br>
+        Phone:
+        {{myinfo.user.phone}}
+        <br>
+        Favorite Dish:
+        <br>
+        &nbsp;&nbsp;&nbsp;Name:
+        {{myinfo.user.menuItem.name}}
+        <br>
+        &nbsp;&nbsp;&nbsp;Description:
+        {{myinfo.user.menuItem.description}}
+        <br>
+        &nbsp;&nbsp;&nbsp;Picture:
+        <br>
+        &nbsp;&nbsp;&nbsp;<img class="img-responsive" width="250" height="150" ng-src="{{myinfo.basePath}}/images/{{myinfo.user.menuItem.short_name}}.jpg" alt="{{myinfo.user.menuItem.name}}">
+    </div>
+    <span ng-if="myinfo.registered">
+        Not Signed Up Yet.
+        <a ui-sref="public.signup">Sign up Now!</a>
+    </span>
+</div>
