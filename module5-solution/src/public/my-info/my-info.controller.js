@@ -10,7 +10,7 @@
         var myinfo = this;
         myinfo.registered = false;
         myinfo.user = MenuService.getUser();
-        console.log(myinfo.user);
+				
         if (!myinfo.user.firstName) {
             myinfo.registered = true;
         }
