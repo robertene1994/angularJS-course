@@ -10,7 +10,8 @@
         var signup = this;
         signup.basePath = "https://davids-restaurant.herokuapp.com";
         signup.user = {};
-
+        signup.aleardySignedUp = MenuService.getUser().firstName ? true : false;
+        console.log(MenuService.getUser());
         signup.submit = function() {
             return MenuService.getMenuItem(signup.user.favoriteDish).success(function(response) {
                 signup.user = {

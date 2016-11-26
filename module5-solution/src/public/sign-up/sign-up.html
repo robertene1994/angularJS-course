@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <div class="container" ng-controller="SignUpController as signup">
     <div class="row">
-        <div class="col-md-8 col-md-offset-4">
+        <div class="col-md-8 col-md-offset-4" ng-if="!signup.aleardySignedUp">
             <h3>Sign Up for the newsletter</h3>
 
             <form name="signUpForm" novalidate>
@@ -45,6 +45,9 @@
             <span ng-if="signup.valid">
                 Your information has been saved.
             </span>
+        </div>
+        <div ng-if="signup.aleardySignedUp">
+            You aleardy signed up.
         </div>
     </div>
 </div>
